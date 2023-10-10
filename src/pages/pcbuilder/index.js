@@ -35,7 +35,7 @@ const PCBuilderPage = () => {
               }}
             >
               <Col className="gutter-row" span={12}>
-                <p>CPU</p>
+                <p>CPU [required]</p>
               </Col>
               {cpu && (
                 <Col className="gutter-row" span={12}>
@@ -75,7 +75,7 @@ const PCBuilderPage = () => {
               }}
             >
               <Col className="gutter-row" span={12}>
-                <p>Motherboard</p>
+                <p>Motherboard [required]</p>
               </Col>
               {motherboard && (
                 <Col className="gutter-row" span={12}>
@@ -115,7 +115,7 @@ const PCBuilderPage = () => {
               }}
             >
               <Col className="gutter-row" span={12}>
-                <p>Ram</p>
+                <p>Ram [required]</p>
               </Col>
               {ram && (
                 <Col className="gutter-row" span={12}>
@@ -155,7 +155,7 @@ const PCBuilderPage = () => {
               }}
             >
               <Col className="gutter-row" span={12}>
-                <p>Power Supply</p>
+                <p>Power Supply [required]</p>
               </Col>
               {powersupply && (
                 <Col className="gutter-row" span={12}>
@@ -195,7 +195,7 @@ const PCBuilderPage = () => {
               }}
             >
               <Col className="gutter-row" span={12}>
-                <p>Storage</p>
+                <p>Storage [required]</p>
               </Col>
               {storage && (
                 <Col className="gutter-row" span={12}>
@@ -235,7 +235,7 @@ const PCBuilderPage = () => {
               }}
             >
               <Col className="gutter-row" span={12}>
-                <p>Monitor</p>
+                <p>Monitor [required]</p>
               </Col>
               {monitor && (
                 <Col className="gutter-row" span={12}>
@@ -318,7 +318,14 @@ const PCBuilderPage = () => {
                   storage &&
                   monitor &&
                   others
-                )
+                ) ||
+                (cpu &&
+                  motherboard &&
+                  ram &&
+                  powersupply &&
+                  storage &&
+                  monitor &&
+                  !others)
               }
             >
               Complete Build

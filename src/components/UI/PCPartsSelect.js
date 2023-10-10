@@ -88,7 +88,7 @@ const PCPartsSelect = ({ pcPartsData, select }) => {
                 style={{ marginTop: "20px" }}
                 onClick={() => handleSelect(pcpart)}
               >
-                Select
+                Add
               </Button>
             )}
           </Card>
