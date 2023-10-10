@@ -15,10 +15,7 @@ CPUPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getServerSideProps = async (context) => {
-  // const { params } = context;
-  console.log(context);
-
+export const getServerSideProps = async () => {
   const res = await fetch(
     "https://pcb-server.vercel.app/pcparts/category/storage"
   );
