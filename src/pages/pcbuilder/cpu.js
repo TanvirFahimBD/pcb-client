@@ -1,5 +1,4 @@
 import RootLayout from "@/components/Layouts/RootLayout";
-import PCParts from "@/components/UI/PCParts";
 import PCPartsSelect from "@/components/UI/PCPartsSelect";
 import React from "react";
 
@@ -16,7 +15,7 @@ CPUPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const res = await fetch("https://pcb-server.vercel.app/pcparts/category/cpu");
   const pcPartsData = await res.json();
   return {

@@ -15,7 +15,7 @@ CPUPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const res = await fetch(
     "https://pcb-server.vercel.app/pcparts/category/power_supply"
   );
